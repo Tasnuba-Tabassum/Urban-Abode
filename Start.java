@@ -9,8 +9,8 @@ public class Start {
  		// f3.setVisible(true);
 		// ProfileDetails f = new ProfileDetails("mubin@gmail.com");
 		// f.setVisible(true);
-		CardDetails f = new CardDetails("o");
-		f.setVisible(true);
+		// CardDetails f = new CardDetails("o");
+		// f.setVisible(true);
 		// Description a1=new Description("o");
         //    a1.setVisible(true);
  }

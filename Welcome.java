@@ -20,10 +20,12 @@ public class Welcome extends JFrame implements ActionListener{
             this.setLocationRelativeTo(null);
 
             ImageIcon img1=new ImageIcon("./images/wallpaper.png");
+            ImageIcon img2=new ImageIcon("./images/LOGIN.png");
+            ImageIcon img3=new ImageIcon("./images/forgetPass.png");
+            ImageIcon img4=new ImageIcon("./images/TextField.png");
 
             
-            JLabel l = new JLabel();
-             
+            JLabel l = new JLabel(); 
             l.setBounds(0,0,1024,768);
             l.setIcon(img1);
 
@@ -38,47 +40,47 @@ public class Welcome extends JFrame implements ActionListener{
 
             //welcome
            JLabel l1 =new JLabel("WELCOME");
-           l1.setFont(new Font("Bell MT", Font.PLAIN, 42));
+           l1.setFont(new Font("Bell MT", Font.PLAIN, 48));
            l1.setForeground(Color.BLACK);
-           l1.setBounds(385, 15, 313, 53);
+           l1.setBounds(335, 41, 313, 53);
            l.add(l1);
 
            //to
            JLabel l2 =new JLabel("to");
-           l2.setFont(new Font("Bell MT", Font.PLAIN, 45));
+           l2.setFont(new Font("Bell MT", Font.PLAIN, 48));
            l2.setForeground(Color.BLACK);
-           l2.setBounds(482, 66, 103, 49);
+           l2.setBounds(460, 81, 103, 49);
            l.add(l2);
            
            //urban abode
            JLabel l3 =new JLabel("URBAN ABODE");
            l3.setFont(new Font("Bell MT", Font.BOLD, 48));
            l3.setForeground(Color.BLACK);
-           l3.setBounds(329, 115, 410, 58);
+           l3.setBounds(307, 134, 410, 58);
            l.add(l3);
 
-           JLabel l4 =new JLabel("Already Have An Account?");
-           l4.setFont(new Font("Bell MT", Font.PLAIN, 24));
-           l4.setForeground(Color.BLACK);
-           l4.setBounds(205, 408, 332, 32);
-           l.add(l4);
+        //    JLabel l4 =new JLabel("Already Have An Account?");
+        //    l4.setFont(new Font("Bell MT", Font.PLAIN, 24));
+        //    l4.setForeground(Color.BLACK);
+        //    l4.setBounds(205, 408, 332, 32);
+        //    l.add(l4);
 
-           JLabel l5 =new JLabel("New Here?");
-           l5.setFont(new Font("Bell MT", Font.PLAIN, 24));
-           l5.setForeground(Color.BLACK);
-           l5.setBounds(632, 410, 143, 29);
-           l.add(l5);
+        //    JLabel l5 =new JLabel("New Here?");
+        //    l5.setFont(new Font("Bell MT", Font.PLAIN, 24));
+        //    l5.setForeground(Color.BLACK);
+        //    l5.setBounds(632, 410, 143, 29);
+        //    l.add(l5);
 
            JLabel l6 =new JLabel("Enter Password");
            l6.setFont(new Font("Bell MT", Font.PLAIN, 24));
            l6.setForeground(Color.BLACK);
-           l6.setBounds(276, 307, 312, 36);
+           l6.setBounds(246, 415, 207, 36);
            l.add(l6);
 
            JLabel l7 =new JLabel("Enter Email Address");
            l7.setFont(new Font("Bell MT", Font.PLAIN, 24));
            l7.setForeground(Color.BLACK);
-           l7.setBounds(275, 210, 231, 36);
+           l7.setBounds(247, 314, 234, 41);
            l.add(l7);
 
            //email er textfield
@@ -89,8 +91,11 @@ public class Welcome extends JFrame implements ActionListener{
            t1.setBorder(null);
            t1.setForeground(Color.WHITE);
            t1.setHorizontalAlignment(SwingConstants.CENTER);
-          // t1.setBorder(null);
+           t1.setBorder(null);
            l.add(t1);
+           JLabel l11=new JLabel(img4);
+           l11.setBounds();
+           l.add(l11);
 
             //pass er textfield
             t2 = new JPasswordField();
@@ -160,7 +165,7 @@ public class Welcome extends JFrame implements ActionListener{
 				String userPassword = t2.getText();
 				Account createAccount = new Account();
                 if(userEmail.equals("admin") && userPassword.equals("admin")){
-                    Admin f = new Admin();
+                    Admin f = new Admin(userEmail);
                     this.setVisible(false);
                     f.setVisible(true);
                 }

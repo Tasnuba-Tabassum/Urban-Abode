@@ -18,6 +18,8 @@ public class ForgotPassword extends JFrame implements ActionListener {
         this.setVisible(true);
         this.setLocationRelativeTo(null);
 
+        ImageIcon img3 = new ImageIcon("./images/Back button.png");
+
         // Background
         ImageIcon backgroundImg = new ImageIcon("./images/wallpaper.png");
         backgroundLabel = new JLabel();
@@ -102,24 +104,28 @@ public class ForgotPassword extends JFrame implements ActionListener {
 
         // Buttons
         changePasswordBtn = new JButton("Change Password");
-        changePasswordBtn.setFont(new Font("Poppins", Font.PLAIN, 23));
-        changePasswordBtn.setForeground(new Color(0xDEE8E5));
+        changePasswordBtn.setFont(new Font("Poppins", Font.PLAIN, 24));
+        changePasswordBtn.setForeground(Color.WHITE);
         changePasswordBtn.setFocusable(false);
         changePasswordBtn.setBackground(new Color(0x54BAB9));
-        changePasswordBtn.setBounds(493, 515, 245, 63);
+        changePasswordBtn.setBounds(680, 602, 259, 49);
         changePasswordBtn.setBorderPainted(false);
         changePasswordBtn.addActionListener(this);
         panel.add(changePasswordBtn);
 
-        returnBtn = new JButton("Previous");
-        returnBtn.setFont(new Font("Poppins", Font.PLAIN, 23));
-        returnBtn.setForeground(new Color(0xDEE8E5));
-        returnBtn.setFocusable(false);
-        returnBtn.setBackground(new Color(0x54BAB9));
-        returnBtn.setBounds(781, 654, 149, 63);
-        returnBtn.setBorderPainted(false);
-        returnBtn.addActionListener(this);
-        panel.add(returnBtn);
+       
+        JButton b11 = new JButton();
+        b11.setBounds(10, 8, 72, 72);
+        b11.setBackground(Color.WHITE);
+        b11.setOpaque(false);
+        b11.setFocusable(false);
+        b11.setBorderPainted(false);
+        backgroundLabel.add(b11);
+        JLabel bl1 = new JLabel(img3);
+        bl1.setBounds(14, 13, 72, 72);
+        backgroundLabel.add(bl1);
+        b11.addActionListener(this);
+
 
         backgroundLabel.add(panel);
         this.add(backgroundLabel);

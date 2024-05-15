@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class UttaraFlat extends JFrame implements ActionListener{
   JButton b1,b2,b3,b4,b5;
-  JLabel l,l1,bl1,bl2,bl3,bl4,bl5,ba1,ba2,ba3,ba4,ba5,ba6,ba7,c1,c2,c3,c4,c5,c6,c7,d1,d2,d3,d4,d5,d6,d7,e1,e2,e3,e4,e5,e6,e7;
+  JLabel l,l1,bl1,bl2,bl3,bl4,bl5,ba1,ba2,ba3,ba4,ba5,ba6,ba7,c1,c2,c3,c4,c5,c6,c7,d1,d2,d3,d4,d5,d6,d7,e1,e2,e3,e4,e5,e6,e7,i1,i2,i3,i4;
  String userEmail;
   Font font32b =new Font ("Bell MT",Font.BOLD,33);
   Font font32=new Font("Bell MT",Font.PLAIN,30);
@@ -14,11 +14,11 @@ public class UttaraFlat extends JFrame implements ActionListener{
     this.userEmail = userEmail;
 //IMAGE SECTION   
    ImageIcon img1=new ImageIcon("./images/wallpaper.png");
-   ImageIcon img2=new ImageIcon("./images/Group 30.png ");
+   //ImageIcon img2=new ImageIcon("./images/Group 30.png ");
    ImageIcon img3=new ImageIcon("./images/Uttara1.png ");
    ImageIcon img4=new ImageIcon("./images/Uttara2.png");
    ImageIcon img5=new ImageIcon("./images/Uttara3.png ");
-   ImageIcon img5=new ImageIcon("./images/Uttara4.png ");
+   ImageIcon img7=new ImageIcon("./images/Uttara4.png ");
    ImageIcon img6=new ImageIcon("./images/Back button.png");
 //BACKROUND LABEL
 l=new JLabel();
@@ -40,7 +40,7 @@ l.setIcon(img1);
  b2.setBorderPainted(false);
  b2.setFocusable(false);
  l.add(b2);
-  bl2=new JLabel(img2);
+  bl2=new JLabel(img3);
   bl2.setBounds(73,120,411,286);
    l.add(bl2);
 
@@ -90,7 +90,7 @@ ba7.setFont(font16);
  b3.setBorderPainted(false);
  b3.setFocusable(false);
  l.add(b3);
-   bl3=new JLabel(img2);
+   bl3=new JLabel(img4);
      bl3.setBounds(532,120,411,286);
 
      c1=new JLabel();

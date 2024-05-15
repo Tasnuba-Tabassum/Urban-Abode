@@ -1,7 +1,7 @@
 public class Start {
     public static void main(String [] args)
 	{
-	ForgotPassword f1 = new ForgotPassword();
+	GulshanFlat f1 = new GulshanFlat("0");
 		f1.setVisible(true);
 		// Area f2 = new Area();
 		// f2.setVisible(true); 

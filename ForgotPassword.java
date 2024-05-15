@@ -8,7 +8,7 @@ public class ForgotPassword extends JFrame implements ActionListener {
     JButton changePasswordBtn, returnBtn;
     RoundedJTextField nameField, emailField, mobileField, newPasswordField;
     JPanel panel;
-    JLabel backgroundLabel, nameLabel, emailLabel, mobileLabel, newPasswordLabel;
+    JLabel l, nameLabel, emailLabel, mobileLabel, newPasswordLabel;
 
     public ForgotPassword() {
         this.setTitle("Forgot Password");
@@ -20,15 +20,18 @@ public class ForgotPassword extends JFrame implements ActionListener {
 
         ImageIcon img3 = new ImageIcon("./images/Back button.png");
 
+
         // Background
-        ImageIcon backgroundImg = new ImageIcon("./images/wallpaper.png");
-        backgroundLabel = new JLabel(backgroundImg);
+        ImageIcon img1 = new ImageIcon("./images/wallpaper.png");
         
+        JLabel l=new JLabel();
+			l.setBounds(0,0,1024,768);
+			l.setIcon(img1);
 
         ImageIcon img4 = new ImageIcon("./images/ForgotPassword2.png");
        // JLabel l = new JLabel();
-        backgroundLabel.setBounds(0, 0, 1024, 768);
-        backgroundLabel.setIcon(img4);
+        l.setBounds(0, 0, 1024, 768);
+        l.setIcon(img4);
 
         // Panel
         // panel = new JPanel();
@@ -37,29 +40,37 @@ public class ForgotPassword extends JFrame implements ActionListener {
         // panel.setLayout(null);
 
         // Labels
-        nameLabel = new JLabel("Name");
+
+        JLabel big = new JLabel("FORGOT PASSWORD");
+        big.setFont(new Font("Poppins", Font.PLAIN, 48));
+        big.setForeground(Color.BLACK);
+        big.setBounds(298, 67, 610, 52);
+        l.add(big);
+
+
+        nameLabel = new JLabel("Name:");
         nameLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
         nameLabel.setForeground(Color.BLACK);
         nameLabel.setBounds(534, 282, 61, 30);
-        this.add(nameLabel);
+        l.add(nameLabel);
 
-        emailLabel = new JLabel("Enter Your Email");
+        emailLabel = new JLabel("Enter Your Email:");
         emailLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
         emailLabel.setForeground(Color.BLACK);
-        emailLabel.setBounds(433, 162, 162, 30);
-        this.add(emailLabel);
+        emailLabel.setBounds(433, 356, 162, 30);
+        l.add(emailLabel);
 
-        mobileLabel = new JLabel("Enter Mobile Number");
+        mobileLabel = new JLabel("Enter Mobile Number:");
         mobileLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
         mobileLabel.setForeground(Color.BLACK);
         mobileLabel.setBounds(385, 436, 210, 30);
-        this.add(mobileLabel);
+        l.add(mobileLabel);
 
-        newPasswordLabel = new JLabel("New Password");
+        newPasswordLabel = new JLabel("New Password:");
         newPasswordLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
         newPasswordLabel.setForeground(Color.BLACK);
         newPasswordLabel.setBounds(450, 517, 145, 30);
-        this.add(newPasswordLabel);
+        l.add(newPasswordLabel);
 
         // TextFields
         nameField = new RoundedJTextField(15);
@@ -71,7 +82,7 @@ public class ForgotPassword extends JFrame implements ActionListener {
         nameField.setAlignmentX(RoundedJTextField.CENTER_ALIGNMENT);
         nameField.setAlignmentY(RoundedJTextField.CENTER_ALIGNMENT);
         nameField.setHorizontalAlignment(RoundedJTextField.CENTER);
-        this.add(nameField);
+        l.add(nameField);
 
         emailField = new RoundedJTextField(15);
         emailField.setBounds(628, 345, 357, 51);
@@ -82,7 +93,7 @@ public class ForgotPassword extends JFrame implements ActionListener {
         emailField.setAlignmentX(RoundedJTextField.CENTER_ALIGNMENT);
         emailField.setAlignmentY(RoundedJTextField.CENTER_ALIGNMENT);
         emailField.setHorizontalAlignment(SwingConstants.CENTER);
-        this.add(emailField);
+        l.add(emailField);
 
         mobileField = new RoundedJTextField(15);
         mobileField.setBounds(628, 425, 357, 51);
@@ -93,7 +104,7 @@ public class ForgotPassword extends JFrame implements ActionListener {
         mobileField.setAlignmentX(RoundedJTextField.CENTER_ALIGNMENT);
         mobileField.setAlignmentY(RoundedJTextField.CENTER_ALIGNMENT);
         mobileField.setHorizontalAlignment(SwingConstants.CENTER);
-        this.add(mobileField);
+        l.add(mobileField);
 
         newPasswordField = new RoundedJTextField(15);
         newPasswordField.setBounds(628, 504, 357, 51);
@@ -104,7 +115,7 @@ public class ForgotPassword extends JFrame implements ActionListener {
         newPasswordField.setAlignmentX(RoundedJTextField.CENTER_ALIGNMENT);
         newPasswordField.setAlignmentY(RoundedJTextField.CENTER_ALIGNMENT);
         newPasswordField.setHorizontalAlignment(SwingConstants.CENTER);
-        this.add(newPasswordField);
+        l.add(newPasswordField);
 
         // Buttons
         changePasswordBtn = new JButton("Change Password");
@@ -115,7 +126,7 @@ public class ForgotPassword extends JFrame implements ActionListener {
         changePasswordBtn.setBounds(680, 602, 259, 49);
         changePasswordBtn.setBorderPainted(false);
         changePasswordBtn.addActionListener(this);
-        this.add(changePasswordBtn);
+        l.add(changePasswordBtn);
 
        
         JButton b11 = new JButton();
@@ -127,7 +138,7 @@ public class ForgotPassword extends JFrame implements ActionListener {
         this.add(b11);
         JLabel bl1 = new JLabel(img3);
         bl1.setBounds(14, 13, 72, 72);
-        this.add(bl1);
+        l.add(bl1);
         // b11.addActionListener(this);
         b11.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -139,9 +150,8 @@ public class ForgotPassword extends JFrame implements ActionListener {
 
 
 
-        // backgroundLabel.add(panel);
-        this.add(backgroundLabel);
-        this.setVisible(true);
+        // l.add(panel);
+        this.add(l);
     }
 
     public void actionPerformed(ActionEvent ae) 

@@ -5,6 +5,16 @@ public class Information extends JFrame implements ActionListener{
      JButton b1;
      JTextField t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26,t27,t28,t29,t30,t31,t32,t33,t34;
      JPanel p1;
+
+          int lineNumber;
+
+		String userName;
+
+
+		String[] UserName = {"__","__","__","__","__","__","__","__"};
+		String[] fullName = {"__","__","__","__","__","__","__","__"};
+		String[] dateOfBirth = {"__","__","__","__","__","__","__","__"};
+		String[] userEmail = {"__","__","__","__","__","__","__","__"};
      
 
      public Information(){

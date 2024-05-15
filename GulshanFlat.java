@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class GulshanFlat extends JFrame implements ActionListener{
   JButton bk,b2,b3,b4,b5;
-  JLabel l,l1,bl1,bl2,bl3,bl4,bl5,ba1,ba2,ba3,ba4,ba5,ba6,ba7,c1,c2,c3,c4,c5,c6,c7,d1,d2,d3,d4,d5,d6,d7,e1,e2,e3,e4,e5,e6,e7;
+  JLabel l,l1,bl1,bl2,bl3,bl4,bl5,ba1,ba2,ba3,ba4,ba5,ba6,ba7,c1,c2,c3,c4,c5,c6,c7,d1,d2,d3,d4,d5,d6,d7,e1,e2,e3,e4,e5,e6,e7,g1,g2,g3,g4;
   String userEmail;
   Font font32b =new Font ("Bell MT",Font.BOLD,33);
   Font font32=new Font("Bell MT",Font.PLAIN,30);
@@ -16,6 +16,10 @@ public class GulshanFlat extends JFrame implements ActionListener{
 //IMAGE SECTION   
    ImageIcon img1=new ImageIcon("./images/wallpaper.png");
    ImageIcon img2=new ImageIcon("./images/Group 30.png ");
+   ImageIcon img3=new ImageIcon("./images/gulshan1.png ");
+   ImageIcon img4=new ImageIcon("./images/gulshan2.png");
+   ImageIcon img5=new ImageIcon("./images/gulshan3.png ");
+   ImageIcon img7=new ImageIcon("./images/gulshan4.png ");
    ImageIcon img6=new ImageIcon("./images/Back button.png");
 //BACKROUND LABEL
 l=new JLabel();
@@ -69,12 +73,14 @@ l.setIcon(img1);
   ba5.setBounds(210,153,210,30);
   ba5.setFont(font16);
   bl2.add(ba5);
+  b2.add(g1);
   ba6=new JLabel();
   ba6.setText("Price: BDT 4.3 crore");
   ba6.setBounds(210,181,210,30);
   ba6.setFont(font16);
   bl2.add(ba6);
    l.add(bl2);
+   
  b2.addActionListener(this);
 //2ND R8 CORNER BOX
  b3=new JButton("BUY NOW !");

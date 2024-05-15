@@ -41,20 +41,6 @@ public class PaymentMethod extends JFrame implements ActionListener{
         l.add(l2);
 
 
-
-        //bkash
-        // b1=new JButton();
-        // b1.setBounds(655,596,163,84);
-        // b1.setOpaque(false);
-        // b1.setFocusable(false);
-        // b1.setBorderPainted(false);
-        // b1.setBackground(new Color(0x54BAB9));
-        // b1.addActionListener(this);
-        // l.add(b1);
-        // bl1 = new JLabel(img3);
-        // bl1.setBounds(655, 596, 163, 84);
-        // l.add(bl1);
-
         //visa
         b2=new JButton();
         b2.setBounds(578, 594, 139, 88);

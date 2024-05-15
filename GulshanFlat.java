@@ -73,7 +73,6 @@ l.setIcon(img1);
   ba5.setBounds(210,153,210,30);
   ba5.setFont(font16);
   bl2.add(ba5);
-  b2.add(g1);
   ba6=new JLabel();
   ba6.setText("Price: BDT 4.3 crore");
   ba6.setBounds(210,181,210,30);

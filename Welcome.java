@@ -156,6 +156,7 @@ public class Welcome extends JFrame implements ActionListener{
                 }
             });
 		   l.add(b3);
+           
            JLabel bl3 = new JLabel(img2);
            bl3.setBounds(434,514,157,37);
            l.add(bl3);

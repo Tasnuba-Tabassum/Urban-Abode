@@ -20,10 +20,12 @@ public class UttaraFlat extends JFrame implements ActionListener{
    ImageIcon img5=new ImageIcon("./images/Uttara3.png ");
    ImageIcon img7=new ImageIcon("./images/Uttara4.png ");
    ImageIcon img6=new ImageIcon("./images/Back button.png");
+
 //BACKROUND LABEL
 l=new JLabel();
 l.setBounds(0,0,1024,768);
 l.setIcon(img1);
+
 //TOP MIDDLE LABEL
    l1=new JLabel();
    l1.setText(" CHOOSE YOUR DESIRED APARTMENT");
@@ -31,6 +33,7 @@ l.setIcon(img1);
    l1.setFont(font32b);
    l1.setForeground(Color.BLACK);
    l.add(l1);
+   
 //1ST TOP LEFT CORNER BOX
  b2=new JButton("BUY NOW !");
  b2.setFont(new Font ("Bell MT",Font.BOLD,18));

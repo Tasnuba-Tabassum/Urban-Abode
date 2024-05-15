@@ -25,11 +25,12 @@ public class About extends JFrame implements ActionListener{
             l2.setFont(new Font("Bell MT", Font.PLAIN, 14));
             l2.setForeground(Color.BLACK);
             l2.setBounds(169,708,693,17);
-            l.add(l2);
+            this.add(l2);
 
             l1=new JLabel(img2);
             l1.setBounds(35,0,953,747);
-            l.add(l1);
+            //l1.setIcon(img2);
+            this.add(l1);
 
             //back BUTTON
             b4=new JButton();
@@ -38,13 +39,31 @@ public class About extends JFrame implements ActionListener{
             b4.setOpaque(false);
             b4.setFocusable(false);
             b4.setBorderPainted(false);
-            b4.addActionListener(this);
+            // b4.addActionListener(this);
+            b4.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                HomePage o = new HomePage("o");
+                o.setVisible(true);
+            }
+        });
             l.add(b4);
             bl4=new JLabel(img5);
             bl4.setBounds(14,13,72,72);
             l.add(bl4);
 
+            // JButton m = new JButton("Testing");
+            // m.setBounds(100, 100, 300, 400);
+            // m.setBackground(Color.black);
+            // m.setForeground(Color.WHITE);
+
+            // this.add(m);
+            // JLabel m = new JLabel(new ImageIcon("./images/about.png"));
+            // m.setBounds(35,0,953,747);
+            // this.add(m);
+
             this.add(l);
+            this.setVisible(true);
         }
 
             public void actionPerformed(ActionEvent ae) 

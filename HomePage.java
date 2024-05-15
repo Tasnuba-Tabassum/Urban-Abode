@@ -53,7 +53,14 @@ public HomePage(String userEmail){
         b4.setFocusable(false);
         b4.setBorderPainted(false);
         b4.setBackground(new Color(0x54BAB9));
-        b4.addActionListener(this);
+        // b4.addActionListener(this);
+        b4.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                About o = new About();
+                o.setVisible(true);
+            }
+        });
         l.add(b4);
         JLabel bl4 = new JLabel(img4);
         bl4.setBounds(380, 545, 263, 184);
@@ -168,10 +175,10 @@ public void actionPerformed(ActionEvent ae)
                     b.setVisible(true);
                }
                //about us
-               else if(ae.getSource()==b4){
-                Description b=new Description(userEmail);
-                this.setVisible(false);
-                b.setVisible(true);
-           }
+        //        else if(ae.getSource()==b4){
+        //         Description b=new Description(userEmail);
+        //         this.setVisible(false);
+        //         b.setVisible(true);
+        //    }
             }
 			}

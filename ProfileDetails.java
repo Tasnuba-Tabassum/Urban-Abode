@@ -104,7 +104,7 @@ public class ProfileDetails extends JFrame implements ActionListener{
         JLabel l5 =new JLabel("NID No");
         l5.setFont(new Font("Bell MT", Font.BOLD, 26));
         l5.setForeground(Color.BLACK);
-        l5.setBounds(369, 432, 90, 48);
+        l5.setBounds(369, 432, 105, 48);
         l.add(l5);
 
         JLabel l6 =new JLabel("Enter Old Password");

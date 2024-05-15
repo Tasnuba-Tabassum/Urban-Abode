@@ -1,6 +1,9 @@
+package gui;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import management.*;
+
 
 public class Description extends JFrame implements ActionListener {
 

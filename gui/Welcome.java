@@ -1,6 +1,9 @@
+package gui;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import management.*;
+
 public class Welcome extends JFrame implements ActionListener{
     JButton b1, b2, b3;
     JTextField t1, t2;
@@ -167,6 +170,11 @@ public class Welcome extends JFrame implements ActionListener{
 				String userPassword = t2.getText();
 				Account createAccount = new Account();
                 if(userEmail.equals("admin") && userPassword.equals("admin")){
+                    Admin f = new Admin(userEmail,userPassword);
+                    this.setVisible(false);
+                    f.setVisible(true);
+                }
+                else if(userEmail.equals("moderator") && userPassword.equals("moderator")){
                     Admin f = new Admin(userEmail,userPassword);
                     this.setVisible(false);
                     f.setVisible(true);

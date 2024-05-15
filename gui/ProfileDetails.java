@@ -1,3 +1,4 @@
+package gui;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -6,6 +7,8 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
+import management.*;
+
 public class ProfileDetails extends JFrame implements ActionListener{
     JButton b1,b2;
     JTextField t1, t2;

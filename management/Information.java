@@ -1,3 +1,4 @@
+package management;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -9,6 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.Scanner;
+import gui.*;
 
 
 public class Information extends JFrame implements ActionListener{
@@ -21,7 +23,7 @@ public class Information extends JFrame implements ActionListener{
           int lineNumber;
 
 		String Email;
-          String password = "admin";
+          String password;
 
 
           String filePath = "bin/files/Users.txt.txt";
@@ -33,10 +35,11 @@ public class Information extends JFrame implements ActionListener{
 		String[] userEmail = {"__","__","__","__","__","__","__","__"};
      
 
-     public Information(String Email)
+     public Information(String Email,String password)
      {
 
           this.Email = Email;
+          this.password = password;
           try {
             File file = new File(filePath);
             Scanner scanner = new Scanner(file);
@@ -412,50 +415,74 @@ public class Information extends JFrame implements ActionListener{
          t32.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t32);
 
-         JLabel l14=new JLabel("User Serial");
-         l14.setFont(new Font("Bell MT",Font.PLAIN,20));
-         l14.setForeground(Color.BLACK);
-         l14.setBounds(86,619,109,23);
-         l14.setHorizontalAlignment(SwingConstants.CENTER);
-         l.add(l14);
-
-         JLabel l15=new JLabel("Admin Password");
-         l15.setFont(new Font("Bell MT",Font.PLAIN,20));
-         l15.setForeground(Color.BLACK);
-         l15.setBounds(277,619,195,23);
-         l15.setHorizontalAlignment(SwingConstants.CENTER);
-         l.add(l15);
-
-         
-         //user serial
-         t33=new JTextField();
-         t33.setBounds(73,642,136,61);
-         t33.setFont(new Font ("Bell MT",Font.PLAIN,20));
-         t33.setBackground(new Color(0x54BAB9));
-         t33.setForeground(Color.black);
-         t33.setHorizontalAlignment(SwingConstants.CENTER);
-         l.add(t33);
-
-         //admin pass
-         t34=new JTextField();
-         t34.setBounds(273,642,204,61);
-         t34.setFont(new Font ("Bell MT",Font.PLAIN,20));
-         t34.setBackground(new Color(0x54BAB9));
-         t34.setForeground(Color.black);
-         t34.setHorizontalAlignment(SwingConstants.CENTER);
-         l.add(t34);
-
          
 
-         b1=new JButton("Remove");
-         b1.setFont(new Font("Bell MT",Font.PLAIN,20));
-         b1.setForeground(Color.BLACK);
-         b1.setFocusable(false);
-         b1.setBackground(new Color(0x54BAB9));
-         b1.setBounds(541,642,173,61);
-         b1.setBorderPainted(false);
-         b1.addActionListener(this);
-         l.add(b1);
+         if(Email.equals("admin"))
+         {
+               JLabel l14=new JLabel("User Serial");
+               l14.setFont(new Font("Bell MT",Font.PLAIN,20));
+               l14.setForeground(Color.BLACK);
+               l14.setBounds(86,619,109,23);
+               l14.setHorizontalAlignment(SwingConstants.CENTER);
+               l.add(l14);
+
+               JLabel l15=new JLabel("Admin Password");
+               l15.setFont(new Font("Bell MT",Font.PLAIN,20));
+               l15.setForeground(Color.BLACK);
+               l15.setBounds(277,619,195,23);
+               l15.setHorizontalAlignment(SwingConstants.CENTER);
+               l.add(l15);
+               
+               //user serial
+               t33=new JTextField();
+               t33.setBounds(73,642,136,61);
+               t33.setFont(new Font ("Bell MT",Font.PLAIN,20));
+               t33.setBackground(new Color(0x54BAB9));
+               t33.setForeground(Color.black);
+               t33.setHorizontalAlignment(SwingConstants.CENTER);
+               l.add(t33);
+
+               //admin pass
+               t34=new JPasswordField();
+               t34.setBounds(273,642,204,61);
+               t34.setFont(new Font ("Bell MT",Font.PLAIN,20));
+               t34.setBackground(new Color(0x54BAB9));
+               t34.setForeground(Color.black);
+               t34.setHorizontalAlignment(SwingConstants.CENTER);
+               l.add(t34);
+
+               
+
+               b1=new JButton("Remove");
+               b1.setFont(new Font("Bell MT",Font.PLAIN,20));
+               b1.setForeground(Color.BLACK);
+               b1.setFocusable(false);
+               b1.setBackground(new Color(0x54BAB9));
+               b1.setBounds(541,642,173,61);
+               b1.setBorderPainted(false);
+               b1.addActionListener(this);
+               l.add(b1);
+         }
+
+         ImageIcon img3 = new ImageIcon("./images/Back button.png");
+         JButton b11 = new JButton();
+         b11.setBounds(14, 13, 72, 72);
+         b11.setBackground(Color.WHITE);
+         b11.setOpaque(false);
+         b11.setFocusable(false);
+         b11.setBorderPainted(false);
+         this.add(b11);
+         JLabel bl1 = new JLabel(img3);
+         bl1.setBounds(14, 13, 72, 72);
+         l.add(bl1);
+         // b11.addActionListener(this);
+         b11.addActionListener(new ActionListener() {
+             public void actionPerformed(ActionEvent e) {
+                 setVisible(false);
+                 Admin a = new Admin(Email,password);
+                 a.setVisible(true);
+             }
+         });
 
          b2=new JButton("Add User");
          b2.setFont(new Font("Bell MT",Font.PLAIN,20));
@@ -514,7 +541,7 @@ public class Information extends JFrame implements ActionListener{
 					JOptionPane.showMessageDialog(null,"ERROR");
 					}
 
-					Information f = new Information(Email);
+					Information f = new Information(Email,password);
 					this.setVisible(false);
 					f.setVisible(true);
 				}
@@ -524,7 +551,7 @@ public class Information extends JFrame implements ActionListener{
 			}
                else if(ae.getSource()==b2)
                {
-                    Admin f = new Admin(Email);
+                    AddUser f = new AddUser(Email,password);
 				this.setVisible(false);
 				f.setVisible(true);
                }

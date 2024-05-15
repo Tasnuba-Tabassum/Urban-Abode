@@ -1,6 +1,9 @@
+package gui;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import management.*;
+
 public class About extends JFrame implements ActionListener{
     JButton b1,b4;
     JLabel l,l1,l2,bl4;

@@ -1,6 +1,9 @@
+package gui;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import management.*;
+
 
 public class GulshanFlat extends JFrame implements ActionListener{
   JButton bk,b2,b3,b4,b5;
@@ -248,6 +251,7 @@ b4.addActionListener(this);
    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    this.setResizable(false);
    this.setSize(1024,768);
+   this.setLocationRelativeTo(null);
    this.add(l);
    this.setVisible(true);
 

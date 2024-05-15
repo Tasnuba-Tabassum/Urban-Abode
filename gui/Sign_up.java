@@ -1,6 +1,10 @@
+package gui;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import management.*;
+
+
 public class Sign_up extends JFrame implements ActionListener{
     JButton b1,b2;
     RoundedJTextField t1, t2, t3, t4,t5,t6;

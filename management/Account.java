@@ -1,7 +1,9 @@
+package management;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
+import gui.*;
 
 public class Account {
     private String fullName;

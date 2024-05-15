@@ -1,6 +1,8 @@
+package gui;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import management.*;
 
 public class Area extends JFrame implements ActionListener{
     JButton b1,b2,b3,b4;

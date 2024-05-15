@@ -1,6 +1,9 @@
+package gui;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.geom.*;
+import management.*;
+
 // implement a round-shaped JTextField
 public class RoundedJTextField extends JTextField {
     public Shape shape;

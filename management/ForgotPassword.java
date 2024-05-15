@@ -1,13 +1,15 @@
+package management;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.util.Scanner;
+import gui.*;
 
 public class ForgotPassword extends JFrame implements ActionListener {
     JButton changePasswordBtn, returnBtn;
     RoundedJTextField nameField, emailField, mobileField, newPasswordField;
-    JPanel panel;
+    JLabel panel;
     JLabel l, nameLabel, emailLabel, mobileLabel, newPasswordLabel;
 
     public ForgotPassword() {
@@ -24,20 +26,10 @@ public class ForgotPassword extends JFrame implements ActionListener {
         // Background
         ImageIcon img1 = new ImageIcon("./images/wallpaper.png");
         
-        JLabel l=new JLabel();
-			l.setBounds(0,0,1024,768);
-			l.setIcon(img1);
+        JLabel l=new JLabel(img1);
 
         ImageIcon img4 = new ImageIcon("./images/ForgotPassword2.png");
        // JLabel l = new JLabel();
-        l.setBounds(0, 0, 1024, 768);
-        l.setIcon(img4);
-
-        // Panel
-        // panel = new JPanel();
-        // // panel.setBackground(new Color(0xA7C6BF));
-        // panel.setBounds(0, 0, 1024, 768);
-        // panel.setLayout(null);
 
         // Labels
 
@@ -143,14 +135,11 @@ public class ForgotPassword extends JFrame implements ActionListener {
         b11.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                Welcome algoQuiz = new Welcome();
-                algoQuiz.setVisible(true);
+                Welcome a = new Welcome();
+                a.setVisible(true);
             }
         });
 
-
-
-        // l.add(panel);
         this.add(l);
     }
 

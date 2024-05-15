@@ -29,10 +29,10 @@ public class CardDetails extends JFrame implements ActionListener {
 
         JLabel l = new JLabel();
 
-        ImageIcon img1 = new ImageIcon("wallpaper.png");
-        ImageIcon img2 = new ImageIcon("paymentbox.png");
-        ImageIcon img3 = new ImageIcon("Back button.png");
-        // ImageIcon img4=new ImageIcon("cardpay.png");
+        ImageIcon img1 = new ImageIcon("./images/wallpaper.png");
+        ImageIcon img2 = new ImageIcon("./images/paymentbox.png");
+        ImageIcon img3 = new ImageIcon("./images/Back button.png");
+        // ImageIcon img4=new ImageIcon("./images/cardpay.png");
 
         l.setBounds(0, 0, 1024, 768);
         l.setIcon(img1);
@@ -199,7 +199,7 @@ public class CardDetails extends JFrame implements ActionListener {
         bl1.setBounds(14, 13, 72, 72);
         l.add(bl1);
 
-        JLabel Im = new JLabel(new ImageIcon("cardpay.png"));
+        JLabel Im = new JLabel(new ImageIcon("./images/cardpay.png"));
         Im.setBounds(524, 157, 500, 500);
         l.add(Im);
 

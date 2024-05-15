@@ -20,7 +20,7 @@ public class Sign_up extends JFrame implements ActionListener{
             JLabel l = new JLabel();
             //frame.getContentPane().setBackground(Color.black);//change color of background
             //l.setBackground(new Color(167,191,191));//customize color entering value from 0-255
-			ImageIcon img1=new ImageIcon("wallpaper.png");
+			ImageIcon img1=new ImageIcon("./images/wallpaper.png");
 
 			l=new JLabel();
 			l.setBounds(0,0,1024,768);
@@ -143,11 +143,11 @@ public class Sign_up extends JFrame implements ActionListener{
         l.add(b2);
 
         
-        JLabel I1 = new JLabel(new ImageIcon("signup1-removebg-preview.png"));
+        JLabel I1 = new JLabel(new ImageIcon("./images/signup1-removebg-preview.png"));
         I1.setBounds(109, 74, 213, 213);
         l.add(I1);
 
-        JLabel I2 = new JLabel(new ImageIcon("image 39.png"));
+        JLabel I2 = new JLabel(new ImageIcon("./images/image 39.png"));
         I2.setBounds(0, 261, 411, 411);
         l.add(I2);
 

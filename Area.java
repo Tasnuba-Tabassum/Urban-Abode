@@ -14,11 +14,11 @@ public class Area extends JFrame implements ActionListener{
 public Area (String userEmail){
   this.userEmail = userEmail;
 
-    ImageIcon img1=new ImageIcon("wallpaper.png");
-    ImageIcon img2=new ImageIcon("image 1.png");
-    ImageIcon img3=new ImageIcon("image 2.png");
-    ImageIcon img4=new ImageIcon("image 31.png");
-    ImageIcon img5=new ImageIcon("Back button.png");
+    ImageIcon img1=new ImageIcon("./images/wallpaper.png");
+    ImageIcon img2=new ImageIcon("./images/image 1.png");
+    ImageIcon img3=new ImageIcon("./images/image 2.png");
+    ImageIcon img4=new ImageIcon("./images/image 31.png");
+    ImageIcon img5=new ImageIcon("./images/Back button.png");
 
     
     l=new JLabel();

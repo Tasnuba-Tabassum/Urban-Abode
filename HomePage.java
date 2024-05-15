@@ -35,11 +35,11 @@ public HomePage(String userEmail){
             e.printStackTrace();
         }
 //IMAGE SECTION   
-    ImageIcon img1=new ImageIcon("wallpaper.png");
-    ImageIcon img2=new ImageIcon("image 37new.png");
-    ImageIcon img3=new ImageIcon("forsale.png ");
-    ImageIcon img6=new ImageIcon("Back button.png");
-    ImageIcon img4=new ImageIcon("image 43.png");
+    ImageIcon img1=new ImageIcon("./images/wallpaper.png");
+    ImageIcon img2=new ImageIcon("./images/image 37new.png");
+    ImageIcon img3=new ImageIcon("./images/forsale.png ");
+    ImageIcon img6=new ImageIcon("./images/Back button.png");
+    ImageIcon img4=new ImageIcon("./images/image 43.png");
   
 //BACKROUND LABEL
    l=new JLabel();

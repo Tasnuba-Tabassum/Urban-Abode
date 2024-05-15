@@ -13,7 +13,7 @@ public class Admin extends JFrame implements ActionListener{
         this.setSize(1024,768);
         this.setVisible(true);
 
-        ImageIcon img1=new ImageIcon("wallpaper.png");
+        ImageIcon img1=new ImageIcon("./images/wallpaper.png");
         JLabel l = new JLabel();
         l.setBounds(0,0,1024,768);
         l.setIcon(img1);
@@ -41,7 +41,7 @@ public class Admin extends JFrame implements ActionListener{
         b1.addActionListener(this);
         l.add(b1);
 
-        JLabel I1=new JLabel(new ImageIcon("ABCimage 35.png"));
+        JLabel I1=new JLabel(new ImageIcon("./images/ABCimage 35.png"));
         I1.setBounds(328,161,415,415);
         l.add(I1);
     }

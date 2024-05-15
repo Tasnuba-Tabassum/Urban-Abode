@@ -395,7 +395,7 @@ public class Information extends JFrame implements ActionListener{
         
 
 
-         JLabel I1=new JLabel (new ImageIcon("wallpaper.png"));
+         JLabel I1=new JLabel (new ImageIcon("./images/wallpaper.png"));
          I1.setBounds(2599,684,1024,768);
          l.add(I1);
 

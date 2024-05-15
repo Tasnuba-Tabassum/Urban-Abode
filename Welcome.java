@@ -19,7 +19,7 @@ public class Welcome extends JFrame implements ActionListener{
             this.setVisible(true);//makes frame visible
             this.setLocationRelativeTo(null);
 
-            ImageIcon img1=new ImageIcon("wallpaper.png");
+            ImageIcon img1=new ImageIcon("./images/wallpaper.png");
 
             
             JLabel l = new JLabel();
@@ -144,7 +144,7 @@ public class Welcome extends JFrame implements ActionListener{
             });
 		   l.add(b3);
             
-           JLabel I5 = new JLabel(new ImageIcon("3042-removebg-preview.png"));
+           JLabel I5 = new JLabel(new ImageIcon("./images/3042-removebg-preview.png"));
            I5.setBounds(0, 425, 1024, 344);
            l.add(I5);
 

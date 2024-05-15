@@ -18,11 +18,11 @@ public class PaymentMethod extends JFrame implements ActionListener{
         this.setLocationRelativeTo(null);
 
         
-        ImageIcon img1=new ImageIcon("wallpaper.png");
-        ImageIcon img2=new ImageIcon("payment.png");
-        ImageIcon img4=new ImageIcon("visa.png");
-        ImageIcon img5=new ImageIcon("mastercard.png");
-        ImageIcon img6=new ImageIcon("Back button.png");
+        ImageIcon img1=new ImageIcon("./images/wallpaper.png");
+        ImageIcon img2=new ImageIcon("./images/payment.png");
+        ImageIcon img4=new ImageIcon("./images/visa.png");
+        ImageIcon img5=new ImageIcon("./images/mastercard.png");
+        ImageIcon img6=new ImageIcon("./images/Back button.png");
 
         l=new JLabel();
         l.setBounds(0,0,1024,768);

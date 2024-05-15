@@ -15,9 +15,9 @@ public class Description extends JFrame implements ActionListener {
         this.setResizable(false);
         this.setSize(1024, 768);
         this.setVisible(true);
-        ImageIcon img3 = new ImageIcon("Back button.png");
+        ImageIcon img3 = new ImageIcon("./images/Back button.png");
 
-        ImageIcon img1 = new ImageIcon("wallpaper.png");
+        ImageIcon img1 = new ImageIcon("./images/wallpaper.png");
         JLabel l = new JLabel();
         l.setBounds(0, 0, 1024, 768);
         l.setIcon(img1);

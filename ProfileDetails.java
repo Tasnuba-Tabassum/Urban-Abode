@@ -54,9 +54,9 @@ public class ProfileDetails extends JFrame implements ActionListener{
 
 
 
-        ImageIcon img1=new ImageIcon("wallpaper.png");
-        ImageIcon img3=new ImageIcon("Back button.png");
-        ImageIcon img2=new ImageIcon("image 38.png");
+        ImageIcon img1=new ImageIcon("./images/wallpaper.png");
+        ImageIcon img3=new ImageIcon("./images/Back button.png");
+        ImageIcon img2=new ImageIcon("./images/image 38.png");
 
         l.setBounds(0,0,1024,768);
         l.setIcon(img1);

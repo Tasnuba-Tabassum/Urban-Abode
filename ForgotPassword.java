@@ -19,7 +19,7 @@ public class ForgotPassword extends JFrame implements ActionListener {
         this.setLocationRelativeTo(null);
 
         // Background
-        ImageIcon backgroundImg = new ImageIcon("wallpaper.png");
+        ImageIcon backgroundImg = new ImageIcon("./images/wallpaper.png");
         backgroundLabel = new JLabel();
         backgroundLabel.setBounds(0, 0, 1024, 768);
         backgroundLabel.setIcon(backgroundImg);

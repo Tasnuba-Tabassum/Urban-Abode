@@ -1,7 +1,7 @@
 public class Start {
     public static void main(String [] args)
 	{
-	GulshanFlat f1 = new GulshanFlat("0");
+	About f1 = new About();
 		f1.setVisible(true);
 		// Area f2 = new Area();
 		// f2.setVisible(true); 

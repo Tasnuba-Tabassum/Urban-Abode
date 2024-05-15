@@ -10,7 +10,7 @@ public class PaymentMethod extends JFrame implements ActionListener{
     public PaymentMethod(String userEmail){
         this.userEmail = userEmail;
 
-        this.setTitle("House Rental Management System");//sets the title of frame
+        this.setTitle("Payment Method");//sets the title of frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//exit out of application
         this.setResizable(false);//prevent from being rezised
         this.setSize(1024,768);//sets the x-dimension & y-dimension of application

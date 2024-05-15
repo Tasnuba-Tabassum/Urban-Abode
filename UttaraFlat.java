@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class UttaraFlat extends JFrame implements ActionListener{
   JButton b1,b2,b3,b4,b5;
-  JLabel l,l1,bl1,bl2,bl3,bl4,bl5,ba1,ba2,ba3,ba4,ba5,ba6,ba7,c1,c2,c3,c4,c5,c6,c7,d1,d2,d3,d4,d5,d6,d7,e1,e2,e3,e4,e5,e6,e7,i1,i2,i3,i4;
+  JLabel l,l1,bl1,bl2,bl3,bl4,bl5,ba1,ba2,ba3,ba4,ba5,ba6,ba7,c1,c2,c3,c4,c5,c6,c7,d1,d2,d3,d4,d5,d6,d7,e1,e2,e3,e4,e5,e6,e7;
  String userEmail;
   Font font32b =new Font ("Bell MT",Font.BOLD,33);
   Font font32=new Font("Bell MT",Font.PLAIN,30);
@@ -141,7 +141,7 @@ b4.setOpaque(true);
 b4.setBorderPainted(false);
 b4.setFocusable(false);
 l.add(b4);
-bl4=new JLabel(img2);
+bl4=new JLabel(img5);
 bl4.setBounds(73,437,419,286);
 
 d1=new JLabel();
@@ -193,7 +193,7 @@ bl4.add(d7);
  b5.setBorderPainted(false);
  b5.setFocusable(false);
  l.add(b5);
-  bl5=new JLabel(img2);
+  bl5=new JLabel(img7);
   bl5.setBounds(532,437,411,286);
 
   e1=new JLabel();

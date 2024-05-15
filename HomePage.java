@@ -105,6 +105,24 @@ public HomePage(String userEmail){
     l.add(b3);
     b3.addActionListener(this);
 
+    //About Us Button
+    JButton aboutBtn=new JButton("About Us");
+    aboutBtn.setForeground(Color.BLACK);
+    aboutBtn.setFont(new Font("Bell MT", Font.BOLD, 40));
+    aboutBtn.setBounds(586,468,263,67);
+    aboutBtn.setBackground(new Color(0X54BAB9));
+    aboutBtn.setOpaque(true);
+    aboutBtn.setFocusable(false);
+    aboutBtn.setBorderPainted(false);
+    aboutBtn.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                About o = new About();
+                o.setVisible(true);
+            }
+        });
+    l.add(aboutBtn);
+
 
 //BACK BUTTON 
     b1=new JButton();

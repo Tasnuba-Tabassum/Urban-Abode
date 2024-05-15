@@ -7,7 +7,7 @@ public class Admin extends JFrame implements ActionListener{
     String userEmail;
    
 
-    public Admin(String userEmail){
+    public Admin(String userEmail, ){
         this.userEmail = userEmail;
 
         this.setTitle("Admin Panel");

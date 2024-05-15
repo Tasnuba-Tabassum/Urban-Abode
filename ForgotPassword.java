@@ -26,40 +26,40 @@ public class ForgotPassword extends JFrame implements ActionListener {
 
         // Panel
         panel = new JPanel();
-        panel.setBackground(new Color(0xA7C6BF));
+        // panel.setBackground(new Color(0xA7C6BF));
         panel.setBounds(0, 0, 1024, 768);
         panel.setLayout(null);
 
         // Labels
-        nameLabel = new JLabel("Enter Your Name");
-        nameLabel.setFont(new Font("Poppins", Font.PLAIN, 22));
+        nameLabel = new JLabel("Name");
+        nameLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
         nameLabel.setForeground(Color.BLACK);
-        nameLabel.setBounds(493, 117, 195, 30);
+        nameLabel.setBounds(534, 282, 61, 30);
         panel.add(nameLabel);
 
         emailLabel = new JLabel("Enter Your Email");
-        emailLabel.setFont(new Font("Poppins", Font.PLAIN, 22));
+        emailLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
         emailLabel.setForeground(Color.BLACK);
-        emailLabel.setBounds(493, 208, 196, 30);
+        emailLabel.setBounds(433, 162, 162, 30);
         panel.add(emailLabel);
 
-        mobileLabel = new JLabel("Enter Your Mobile Number");
-        mobileLabel.setFont(new Font("Poppins", Font.PLAIN, 22));
+        mobileLabel = new JLabel("Enter Mobile Number");
+        mobileLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
         mobileLabel.setForeground(Color.BLACK);
-        mobileLabel.setBounds(493, 302, 358, 32);
+        mobileLabel.setBounds(385, 436, 210, 30);
         panel.add(mobileLabel);
 
-        newPasswordLabel = new JLabel("Enter New Password");
-        newPasswordLabel.setFont(new Font("Poppins", Font.PLAIN, 22));
+        newPasswordLabel = new JLabel("New Password");
+        newPasswordLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
         newPasswordLabel.setForeground(Color.BLACK);
-        newPasswordLabel.setBounds(493, 394, 253, 32);
+        newPasswordLabel.setBounds(450, 517, 145, 30);
         panel.add(newPasswordLabel);
 
         // TextFields
-        nameField = new RoundedJTextField(19);
-        nameField.setBounds(490, 149, 441, 49);
-        nameField.setFont(new Font("Poppins", Font.PLAIN, 22));
-        nameField.setForeground(Color.black);
+        nameField = new RoundedJTextField(15);
+        nameField.setBounds(628, 272, 357, 51);
+        nameField.setFont(new Font("Poppins", Font.PLAIN, 20));
+        nameField.setForeground(Color.BLACK);
         nameField.setBackground(new Color(0x488B8F));
         nameField.setBorder(null);
         nameField.setAlignmentX(RoundedJTextField.CENTER_ALIGNMENT);
@@ -67,9 +67,9 @@ public class ForgotPassword extends JFrame implements ActionListener {
         nameField.setHorizontalAlignment(RoundedJTextField.CENTER);
         panel.add(nameField);
 
-        emailField = new RoundedJTextField(19);
-        emailField.setBounds(490, 238, 441, 49);
-        emailField.setFont(new Font("Poppins", Font.PLAIN, 22));
+        emailField = new RoundedJTextField(15);
+        emailField.setBounds(628, 345, 357, 51);
+        emailField.setFont(new Font("Poppins", Font.PLAIN, 20));
         emailField.setForeground(Color.black);
         emailField.setBackground(new Color(0x488B8F));
         emailField.setBorder(null);
@@ -78,9 +78,9 @@ public class ForgotPassword extends JFrame implements ActionListener {
         emailField.setHorizontalAlignment(SwingConstants.CENTER);
         panel.add(emailField);
 
-        mobileField = new RoundedJTextField(19);
-        mobileField.setBounds(489, 334, 441, 49);
-        mobileField.setFont(new Font("Poppins", Font.PLAIN, 22));
+        mobileField = new RoundedJTextField(15);
+        mobileField.setBounds(628, 425, 357, 51);
+        mobileField.setFont(new Font("Poppins", Font.PLAIN, 20));
         mobileField.setForeground(Color.black);
         mobileField.setBackground(new Color(0x488B8F));
         mobileField.setBorder(null);
@@ -89,9 +89,9 @@ public class ForgotPassword extends JFrame implements ActionListener {
         mobileField.setHorizontalAlignment(SwingConstants.CENTER);
         panel.add(mobileField);
 
-        newPasswordField = new RoundedJTextField(19);
-        newPasswordField.setBounds(489, 426, 441, 49);
-        newPasswordField.setFont(new Font("Poppins", Font.PLAIN, 22));
+        newPasswordField = new RoundedJTextField(15);
+        newPasswordField.setBounds(628, 504, 357, 51);
+        newPasswordField.setFont(new Font("Poppins", Font.PLAIN, 20));
         newPasswordField.setForeground(Color.black);
         newPasswordField.setBackground(new Color(0x488B8F));
         newPasswordField.setBorder(null);
@@ -196,7 +196,7 @@ public class ForgotPassword extends JFrame implements ActionListener {
     private boolean checkSignUpData(String userName, String userEmail, String userMobile) 
 	{
     
-    Account account = new Account();
+    // Account account = new Account();
     
  
     boolean isMatch = false;

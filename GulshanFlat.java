@@ -16,10 +16,6 @@ public class GulshanFlat extends JFrame implements ActionListener{
 //IMAGE SECTION   
    ImageIcon img1=new ImageIcon("./images/wallpaper.png");
    ImageIcon img2=new ImageIcon("./images/Group 30.png ");
-   // ImageIcon img3=new ImageIcon(" ");
-   // ImageIcon img4=new ImageIcon(" ");
-   // ImageIcon img5=new ImageIcon(" ");
-   // ImageIcon img5=new ImageIcon(" ");
    ImageIcon img6=new ImageIcon("./images/Back button.png");
 //BACKROUND LABEL
 l=new JLabel();

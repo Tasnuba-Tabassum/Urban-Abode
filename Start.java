@@ -1,8 +1,8 @@
 public class Start {
     public static void main(String [] args)
 	{
-	// Welcome f1 = new Welcome();
-	// 	f1.setVisible(true);
+	ForgotPassword f1 = new ForgotPassword();
+		f1.setVisible(true);
 		// Area f2 = new Area();
 		// f2.setVisible(true); 
 		// PaymentMethod f3 = new PaymentMethod();
@@ -12,6 +12,7 @@ public class Start {
 		// CardDetails f = new CardDetails("o");
 		// f.setVisible(true);
 		// Description a1=new Description("o");
-        //    a1.setVisible(true);
+		// ForgotPassword f = new ForgotPassword();
+        // f.setVisible(true);
  }
 }

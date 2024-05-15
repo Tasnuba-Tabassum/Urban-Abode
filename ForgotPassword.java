@@ -22,9 +22,8 @@ public class ForgotPassword extends JFrame implements ActionListener {
 
         // Background
         ImageIcon backgroundImg = new ImageIcon("./images/wallpaper.png");
-        backgroundLabel = new JLabel();
-        backgroundLabel.setBounds(0, 0, 1024, 768);
-        backgroundLabel.setIcon(backgroundImg);
+        backgroundLabel = new JLabel(backgroundImg);
+        
 
         ImageIcon img4 = new ImageIcon("./images/ForgotPassword2.png");
        // JLabel l = new JLabel();
@@ -32,80 +31,80 @@ public class ForgotPassword extends JFrame implements ActionListener {
         backgroundLabel.setIcon(img4);
 
         // Panel
-        panel = new JPanel();
-        // panel.setBackground(new Color(0xA7C6BF));
-        panel.setBounds(0, 0, 1024, 768);
-        panel.setLayout(null);
+        // panel = new JPanel();
+        // // panel.setBackground(new Color(0xA7C6BF));
+        // panel.setBounds(0, 0, 1024, 768);
+        // panel.setLayout(null);
 
         // Labels
         nameLabel = new JLabel("Name");
         nameLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
         nameLabel.setForeground(Color.BLACK);
         nameLabel.setBounds(534, 282, 61, 30);
-        panel.add(nameLabel);
+        this.add(nameLabel);
 
         emailLabel = new JLabel("Enter Your Email");
         emailLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
         emailLabel.setForeground(Color.BLACK);
         emailLabel.setBounds(433, 162, 162, 30);
-        panel.add(emailLabel);
+        this.add(emailLabel);
 
         mobileLabel = new JLabel("Enter Mobile Number");
         mobileLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
         mobileLabel.setForeground(Color.BLACK);
         mobileLabel.setBounds(385, 436, 210, 30);
-        panel.add(mobileLabel);
+        this.add(mobileLabel);
 
         newPasswordLabel = new JLabel("New Password");
         newPasswordLabel.setFont(new Font("Poppins", Font.PLAIN, 20));
         newPasswordLabel.setForeground(Color.BLACK);
         newPasswordLabel.setBounds(450, 517, 145, 30);
-        panel.add(newPasswordLabel);
+        this.add(newPasswordLabel);
 
         // TextFields
         nameField = new RoundedJTextField(15);
         nameField.setBounds(628, 272, 357, 51);
         nameField.setFont(new Font("Poppins", Font.PLAIN, 20));
-        nameField.setForeground(Color.BLACK);
+        nameField.setForeground(Color.WHITE);
         nameField.setBackground(new Color(0x488B8F));
         nameField.setBorder(null);
         nameField.setAlignmentX(RoundedJTextField.CENTER_ALIGNMENT);
         nameField.setAlignmentY(RoundedJTextField.CENTER_ALIGNMENT);
         nameField.setHorizontalAlignment(RoundedJTextField.CENTER);
-        panel.add(nameField);
+        this.add(nameField);
 
         emailField = new RoundedJTextField(15);
         emailField.setBounds(628, 345, 357, 51);
         emailField.setFont(new Font("Poppins", Font.PLAIN, 20));
-        emailField.setForeground(Color.black);
+        emailField.setForeground(Color.WHITE);
         emailField.setBackground(new Color(0x488B8F));
         emailField.setBorder(null);
         emailField.setAlignmentX(RoundedJTextField.CENTER_ALIGNMENT);
         emailField.setAlignmentY(RoundedJTextField.CENTER_ALIGNMENT);
         emailField.setHorizontalAlignment(SwingConstants.CENTER);
-        panel.add(emailField);
+        this.add(emailField);
 
         mobileField = new RoundedJTextField(15);
         mobileField.setBounds(628, 425, 357, 51);
         mobileField.setFont(new Font("Poppins", Font.PLAIN, 20));
-        mobileField.setForeground(Color.black);
+        mobileField.setForeground(Color.WHITE);
         mobileField.setBackground(new Color(0x488B8F));
         mobileField.setBorder(null);
         mobileField.setAlignmentX(RoundedJTextField.CENTER_ALIGNMENT);
         mobileField.setAlignmentY(RoundedJTextField.CENTER_ALIGNMENT);
         mobileField.setHorizontalAlignment(SwingConstants.CENTER);
-        panel.add(mobileField);
+        this.add(mobileField);
 
         newPasswordField = new RoundedJTextField(15);
         newPasswordField.setBounds(628, 504, 357, 51);
         newPasswordField.setFont(new Font("Poppins", Font.PLAIN, 20));
-        newPasswordField.setForeground(Color.black);
+        newPasswordField.setForeground(Color.WHITE);
         newPasswordField.setBackground(new Color(0x488B8F));
         newPasswordField.setBorder(null);
         newPasswordField.setAlignmentX(RoundedJTextField.CENTER_ALIGNMENT);
         newPasswordField.setAlignmentY(RoundedJTextField.CENTER_ALIGNMENT);
         newPasswordField.setHorizontalAlignment(SwingConstants.CENTER);
-        panel.add(newPasswordField);
+        this.add(newPasswordField);
 
         // Buttons
         changePasswordBtn = new JButton("Change Password");
@@ -116,7 +115,7 @@ public class ForgotPassword extends JFrame implements ActionListener {
         changePasswordBtn.setBounds(680, 602, 259, 49);
         changePasswordBtn.setBorderPainted(false);
         changePasswordBtn.addActionListener(this);
-        panel.add(changePasswordBtn);
+        this.add(changePasswordBtn);
 
        
         JButton b11 = new JButton();
@@ -125,15 +124,24 @@ public class ForgotPassword extends JFrame implements ActionListener {
         b11.setOpaque(false);
         b11.setFocusable(false);
         b11.setBorderPainted(false);
-        backgroundLabel.add(b11);
+        this.add(b11);
         JLabel bl1 = new JLabel(img3);
         bl1.setBounds(14, 13, 72, 72);
-        backgroundLabel.add(bl1);
-        b11.addActionListener(this);
+        this.add(bl1);
+        // b11.addActionListener(this);
+        b11.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                Welcome algoQuiz = new Welcome();
+                algoQuiz.setVisible(true);
+            }
+        });
 
 
-        backgroundLabel.add(panel);
+
+        // backgroundLabel.add(panel);
         this.add(backgroundLabel);
+        this.setVisible(true);
     }
 
     public void actionPerformed(ActionEvent ae) 
@@ -188,12 +196,12 @@ public class ForgotPassword extends JFrame implements ActionListener {
 				JOptionPane.showMessageDialog(null, "Invalid information. Please try again.");
 			}
         } 
-		else if (ae.getSource() == returnBtn) 
-		{
-            Welcome welcomePage = new Welcome();
-            this.setVisible(false);
-            welcomePage.setVisible(true);
-        }
+		// else if (ae.getSource() == returnBtn) 
+		// {
+        //     Welcome welcomePage = new Welcome();
+        //     this.setVisible(false);
+        //     welcomePage.setVisible(true);
+        // }
     }
 
     private void clearFields() 

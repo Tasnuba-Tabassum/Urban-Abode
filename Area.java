@@ -38,11 +38,11 @@ public Area (String userEmail){
     l.add(l1);
 
 
-    b1=new JButton();//UTTara
-    // b1.setFont(new Font("Bell MT",Font.PLAIN,35));
-		// b1.setForeground(Color.BLACK);
-    // b1.setHorizontalAlignment(SwingConstants.CENTER);
-    // b1.setVerticalAlignment(SwingConstants.TOP);
+    b1=new JButton("UTTARA");
+    b1.setFont(new Font("Bell MT",Font.PLAIN,35));
+		b1.setForeground(Color.BLACK);
+    b1.setHorizontalAlignment(SwingConstants.CENTER);
+    b1.setVerticalAlignment(SwingConstants.TOP);
     b1.setBounds(28,135,293,534);
     b1.setOpaque(false);
     b1.setFocusable(false);
@@ -55,7 +55,11 @@ public Area (String userEmail){
      l.add(bl1);
 
 
-    b2=new JButton();//BASUNDHARA
+    b2=new JButton("BASUNDHARA");
+    b2.setFont(new Font("Bell MT",Font.PLAIN,35));
+		b2.setForeground(Color.BLACK);
+    b2.setHorizontalAlignment(SwingConstants.CENTER);
+    b2.setVerticalAlignment(SwingConstants.TOP);
     b2.setBounds(365,177,293,534);
     b2.setOpaque(false);
     b2.setFocusable(false);
@@ -67,7 +71,11 @@ public Area (String userEmail){
       bl2.setBounds(365,177,293,534);
       l.add(bl2);
  
-    b3=new JButton();//GULSHAN
+    b3=new JButton("GULSHAN");
+    b3.setFont(new Font("Bell MT",Font.PLAIN,35));
+		b3.setForeground(Color.BLACK);
+    b3.setHorizontalAlignment(SwingConstants.CENTER);
+    b3.setVerticalAlignment(SwingConstants.TOP);
     b3.setBounds(702,130,293,534);
     b3.setOpaque(false);
     b3.setBackground(Color.WHITE);

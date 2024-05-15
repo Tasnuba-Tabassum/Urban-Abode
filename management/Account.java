@@ -70,7 +70,6 @@ public class Account {
             file.createNewFile();
             writer  = new FileWriter(file,true);
             writer.write(getUserEmail()+"\t");
-            //writer.write(getUserName()+"\t");
             writer.write(getUserPassword()+"\t");
             writer.write(getnID()+"\t");
             writer.write(getMobileNum()+"\t");

@@ -32,15 +32,7 @@ public class Welcome extends JFrame implements ActionListener{
             l.setBounds(0,0,1024,768);
             l.setIcon(img1);
 
-            //frame.getContentPane().setBackground(Color.black);//change color of background
-            //l.setBackground(new Color(167,191,191));//customize color entering value from 0-255
-        
-          
-
-        //    Font f1= new Font("Goudy Old Style", Font.BOLD, 48);
-        //    Font f2= new Font("Goudy Old Style", Font.BOLD, 24);
-        //    Font f3= new Font("Goudy Old Style", Font.BOLD, 32);
-
+            
             //welcome
            JLabel l1 =new JLabel("WELCOME");
            l1.setFont(new Font("Bell MT", Font.PLAIN, 48));

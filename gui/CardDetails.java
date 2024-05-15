@@ -136,7 +136,7 @@ public class CardDetails extends JFrame implements ActionListener {
             if (name.isEmpty() || number.isEmpty() || userPassword.isEmpty() || year.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Full Fill All Box");
             } else if (createAccount.getAccount(userEmail, userPassword)) {
-                System.out.println("Clicked");
+                // System.out.println("Clicked");
                 try {
                     File file = new File(filePath);
                     Scanner scanner = new Scanner(file);
@@ -210,62 +210,6 @@ public class CardDetails extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
-        // if (ae.getSource() == b1) {
-        //     String name = t1.getText();
-        //     String number = t2.getText();
-        //     String year = t3.getText();
-        //     String pin = t4.getText();
-        //     Account createAccount = new Account();
-
-        //     if (name.isEmpty() || number.isEmpty() || year.isEmpty() || pin.isEmpty()) {
-        //         JOptionPane.showMessageDialog(null, "Full Fill All Box");
-        //     }
-
-        //     else if (createAccount.getAccount(userEmail, userPassword)) {
-        //         try {
-        //             File file = new File(filePath);
-        //             Scanner scanner = new Scanner(file);
-
-        //             StringBuilder fileContent = new StringBuilder();
-        //             lineNumber = 0;
-        //             while (scanner.hasNextLine()) {
-        //                 lineNumber++;
-        //                 String line = scanner.nextLine();
-
-        //                 if (line.contains(userEmail)) {
-        //                     String[] values = line.split("\t");
-        //                     values[5] = PaymentDone;
-        //                     line = String.join("\t", values);
-        //                 }
-
-        //                 fileContent.append(line).append("\n");
-        //             }
-
-        //             scanner.close();
-
-        //             FileWriter writer = new FileWriter(file);
-        //             writer.write(fileContent.toString());
-        //             writer.close();
-
-        //             JOptionPane.showMessageDialog(null, "Payment Successful!\nThanks for purchasing from us.");
-
-        //             HomePage f = new HomePage(this.userEmail);
-        //             this.setVisible(false);
-        //             f.setVisible(true);
-
-        //         } catch (FileNotFoundException e) {
-        //             e.printStackTrace();
-        //         } catch (IOException e) {
-        //             e.printStackTrace();
-        //         }
-        //     }
-        // } 
-        // else if (ae.getSource() == b11) {
-        //     Area f = new Area(userEmail);
-        //     this.setVisible(false);
-        //     f.setVisible(true);
-
-        // }
-
+     
     }
 }

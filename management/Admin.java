@@ -22,12 +22,10 @@ public class Admin extends JFrame implements ActionListener{
         this.setVisible(true);
         this.setLocationRelativeTo(null);
 
-        ImageIcon img6=new ImageIcon("Back button.png");
-        ImageIcon img2=new ImageIcon("ABCimage 35.png");
-        ImageIcon img1=new ImageIcon("wallpaper.png");
-        JLabel l = new JLabel();
-        l.setBounds(0,0,1024,768);
-        l.setIcon(img1);
+        ImageIcon img6=new ImageIcon("./images/Back button.png");
+        ImageIcon img2=new ImageIcon("./images/ABCimage 35.png");
+        ImageIcon img1=new ImageIcon("./images/wallpaper.png");
+        JLabel l = new JLabel(img1);
 
 
         b1=new JButton("User Information");
@@ -58,18 +56,11 @@ public class Admin extends JFrame implements ActionListener{
         bl1.setBounds(14,13,72,72);
         l.add(bl1);
        
-
-
-
-
-
        
         this.add(l);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
-       // throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
        if(e.getSource()==b1){
         dispose();
         Information b1=new Information(userEmail,userPassword);

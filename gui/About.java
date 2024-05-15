@@ -55,58 +55,14 @@ public class About extends JFrame implements ActionListener{
             bl4.setBounds(14,13,72,72);
             l.add(bl4);
 
-            // JButton m = new JButton("Testing");
-            // m.setBounds(100, 100, 300, 400);
-            // m.setBackground(Color.black);
-            // m.setForeground(Color.WHITE);
-
-            // this.add(m);
-            // JLabel m = new JLabel(new ImageIcon("./images/about.png"));
-            // m.setBounds(35,0,953,747);
-            // this.add(m);
-
             this.add(l);
             this.setVisible(true);
         }
 
             public void actionPerformed(ActionEvent ae) 
 		{
-			// if(ae.getSource()==b1)
-			// {
-			// 	String userEmail =t1.getText();
-			// 	String userPassword = t2.getText();
-			// 	Account createAccount = new Account();
-            //     if(userEmail.equals("admin") && userPassword.equals("admin")){
-            //         Admin f = new Admin(userEmail);
-            //         this.setVisible(false);
-            //         f.setVisible(true);
-            //     }
-			//  	else if(createAccount.getAccount(userEmail, userPassword))
-			// 	{
-			// 		JOptionPane.showMessageDialog(null,"Login Successful");
-			// 		HomePage f = new HomePage(userEmail);
-			// 		this.setVisible(false);
-			// 		f.setVisible(true);
-	
-			// 	}
-			// 	else{JOptionPane.showMessageDialog(null, "Check Email/Password");}
 			
-				
-			// }
-            // // if(ae.getSource()== b3 )
-			// // {
-			// // 	ForgotPassword f = new ForgotPassword();
-			// // 	this.setVisible(false);
-			// // 	f.setVisible(true);
-			// // }
-
-
-			// if(ae.getSource()==b2)
-			// {
-			// 	Sign_up f = new Sign_up();
-			// 	this.setVisible(false);
-			// 	f.setVisible(true);
-	}		// } 
+	}
 
 }
 

@@ -37,6 +37,7 @@ public class AddUser extends JFrame implements ActionListener{
 		l1.setFont(new Font("Bell MT", Font.PLAIN, 48));
 		l1.setForeground(Color.BLACK);
 		l1.setBounds(260, 11, 526, 60);
+		l1.setHorizontalAlignment(SwingConstants.CENTER);
 		l.add(l1);
 
         l2 = new JLabel("Enter Name");
@@ -129,12 +130,12 @@ public class AddUser extends JFrame implements ActionListener{
 		t5.setHorizontalAlignment(SwingConstants.CENTER);
 		l.add(t5);
 
-        b1 = new JButton("Add User");
+        b1 = new JButton("Add");
         b1.setFont(new Font("Bell MT",Font.BOLD,30));
         b1.setForeground(Color.WHITE);
         b1.setFocusable(false);
         b1.setBackground(new Color(0x54BAB9));
-        b1.setBounds(533, 640, 150, 46);
+        b1.setBounds(533, 628, 150, 46);
         b1.setBorderPainted(false);
         b1.addActionListener(this);
         l.add(b1);
@@ -188,7 +189,7 @@ public class AddUser extends JFrame implements ActionListener{
 					Account createAccount = new Account(userFullName, usernID, userEmail, MobileNum, userPassword);
 					createAccount.addAccount();
 					JOptionPane.showMessageDialog(null, "Account Added");
-					t1.setText("");
+					t1.setText("");//lekha clear korar jonno
 					t2.setText("");
 					t3.setText("");
 					t4.setText("");

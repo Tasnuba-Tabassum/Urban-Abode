@@ -29,7 +29,10 @@ public class ForgotPassword extends JFrame implements ActionListener {
         JLabel l=new JLabel(img1);
 
         ImageIcon img4 = new ImageIcon("./images/ForgotPassword2.png");
-       // JLabel l = new JLabel();
+        
+        JLabel panel = new JLabel(img4);
+        panel.setBounds(28, 261, 324, 328);
+
 
         // Labels
 
@@ -140,6 +143,7 @@ public class ForgotPassword extends JFrame implements ActionListener {
             }
         });
 
+        l.add(panel);
         this.add(l);
     }
 

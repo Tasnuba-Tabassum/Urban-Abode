@@ -15,10 +15,10 @@ public class UttaraFlat extends JFrame implements ActionListener{
 //IMAGE SECTION   
    ImageIcon img1=new ImageIcon("./images/wallpaper.png");
    ImageIcon img2=new ImageIcon("./images/Group 30.png ");
-   // ImageIcon img3=new ImageIcon(" ");
-   // ImageIcon img4=new ImageIcon(" ");
-   // ImageIcon img5=new ImageIcon(" ");
-   // ImageIcon img5=new ImageIcon(" ");
+   ImageIcon img3=new ImageIcon("./images/Uttara1.png ");
+   ImageIcon img4=new ImageIcon("./images/Uttara2.png");
+   ImageIcon img5=new ImageIcon("./images/Uttara3.png ");
+   ImageIcon img5=new ImageIcon("./images/Uttara4.png ");
    ImageIcon img6=new ImageIcon("./images/Back button.png");
 //BACKROUND LABEL
 l=new JLabel();

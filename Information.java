@@ -1,61 +1,111 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.Scanner;
+
+
 public class Information extends JFrame implements ActionListener{
-     JButton b1;
-     JTextField t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26,t27,t28,t29,t30,t31,t32,t33,t34;
+     JButton b1,b2;
+     JLabel t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,t13,t14,t15,t16,t17,t18,t19,t20,t21,t22,t23,t24,t25,t26,t27,t28,t29,t30,t31,t32;
+     JTextField t33,t34;
      JPanel p1;
+     JLabel b;
 
           int lineNumber;
 
-		String userName;
+		String Email;
+          String password = "admin";
 
 
-		String[] UserName = {"__","__","__","__","__","__","__","__"};
-		String[] fullName = {"__","__","__","__","__","__","__","__"};
-		String[] dateOfBirth = {"__","__","__","__","__","__","__","__"};
+          String filePath = "bin/files/Users.txt.txt";
+          Path path = Paths.get("bin/files/Users.txt.txt");
+
+		String[] Name = {"__","__","__","__","__","__","__","__"};
+		String[] Mobile = {"__","__","__","__","__","__","__","__"};
+		String[] Password = {"__","__","__","__","__","__","__","__"};
 		String[] userEmail = {"__","__","__","__","__","__","__","__"};
      
 
-     public Information(){
+     public Information(String Email)
+     {
+
+          this.Email = Email;
+          try {
+            File file = new File(filePath);
+            Scanner scanner = new Scanner(file);
+
+            for (int lineNumber = 0 ; scanner.hasNextLine() ; lineNumber++) {
+                String line = scanner.nextLine();
+				String[] value = line.split("\t");
+
+                    this.Mobile[lineNumber] = value[3];
+                    this.Name[lineNumber] = value[4];
+                    this.Password[lineNumber] = value[1];
+                    this.userEmail[lineNumber] = value[0];
+                    this.lineNumber = lineNumber;
+                
+            }
+            scanner.close();
+        } 
+			catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
          this.setTitle("House Rental Mnagement System");
          this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          this.setResizable(false);
          this.setSize(1024,768);
          this.setVisible(true);
+         this.setLocationRelativeTo(null);
      
 
+
+
+
          JLabel l= new JLabel();
-         l.setBackground(new Color(222,232,230));
+        // l.setBackground(new Color(222,232,230));
 
          JLabel l1=new JLabel("User Information");
          l1.setFont(new Font("Bell MT",Font.PLAIN,45));
          l1.setForeground(Color.BLACK);
          l1.setBounds(309,21,405,60);
+         l1.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(l1);
 
-         JLabel l2=new JLabel("User Name");
+         JLabel l2=new JLabel("Name");
          l2.setFont(new Font("Bell MT",Font.PLAIN,20));
          l2.setForeground(Color.BLACK);
          l2.setBounds(104,113,109,23);
+         l2.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(l2);
 
          JLabel l3=new JLabel("Mobile Number");
          l3.setFont(new Font("Bell MT",Font.PLAIN,20));
          l3.setForeground(Color.BLACK);
          l3.setBounds(330,113,143,23);
+         l3.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(l3);
 
          JLabel l4=new JLabel("Password");
          l4.setFont(new Font("Bell MT",Font.PLAIN,20));
          l4.setForeground(Color.BLACK);
          l4.setBounds(578,113,109,23);
+         l4.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(l4);
 
          JLabel l5=new JLabel("Email");
          l5.setFont(new Font("Bell MT",Font.PLAIN,20));
          l5.setForeground(Color.BLACK);
          l5.setBounds(817,113,109,23);
+         l5.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(l5);
 
          JLabel l6=new JLabel("1");
@@ -106,19 +156,7 @@ public class Information extends JFrame implements ActionListener{
          l13.setBounds(9,541,35,23);
          l.add(l13);
 
-         JLabel l14=new JLabel("User Serial");
-         l14.setFont(new Font("Bell MT",Font.PLAIN,20));
-         l14.setForeground(Color.BLACK);
-         l14.setBounds(139,597,109,23);
-         l.add(l14);
-
-         JLabel l15=new JLabel("Admin Password");
-         l15.setFont(new Font("Bell MT",Font.PLAIN,20));
-         l15.setForeground(Color.BLACK);
-         l15.setBounds(390,597,195,23);
-         l.add(l15);
-
-         t1=new JTextField();
+         t1=new JLabel(Name[0]);
          t1.setBounds(44,136,(int) 217.81,45);
          t1.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t1.setBackground(new Color(217,217,217));
@@ -126,7 +164,7 @@ public class Information extends JFrame implements ActionListener{
          t1.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t1);
 
-         t2=new JTextField();
+         t2=new JLabel(Name[1]);
          t2.setBounds(44,191,(int) 217.81,45);
          t2.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t2.setBackground(new Color(217,217,217));
@@ -134,7 +172,7 @@ public class Information extends JFrame implements ActionListener{
          t2.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t2);
 
-         t3=new JTextField();
+         t3=new JLabel(Name[2]);
          t3.setBounds(44,247,(int) 217.81,45);
          t3.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t3.setBackground(new Color(217,217,217));
@@ -142,7 +180,7 @@ public class Information extends JFrame implements ActionListener{
          t3.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t3);
 
-         t4=new JTextField();
+         t4=new JLabel(Name[3]);
          t4.setBounds(44,302,(int) 217.81,45);
          t4.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t4.setBackground(new Color(217,217,217));
@@ -150,7 +188,7 @@ public class Information extends JFrame implements ActionListener{
          t4.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t4);
 
-         t5=new JTextField();
+         t5=new JLabel(Name[4]);
          t5.setBounds(44,359,(int) 217.81,45);
          t5.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t5.setBackground(new Color(217,217,217));
@@ -158,7 +196,7 @@ public class Information extends JFrame implements ActionListener{
          t5.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t5);
 
-         t6=new JTextField();
+         t6=new JLabel(Name[5]);
          t6.setBounds(44,416,(int) 217.81,45);
          t6.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t6.setBackground(new Color(217,217,217));
@@ -166,7 +204,7 @@ public class Information extends JFrame implements ActionListener{
          t6.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t6);
 
-         t7=new JTextField();
+         t7=new JLabel(Name[6]);
          t7.setBounds(44,473,(int) 217.81,45);
          t7.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t7.setBackground(new Color(217,217,217));
@@ -174,7 +212,7 @@ public class Information extends JFrame implements ActionListener{
          t7.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t7);
 
-         t8=new JTextField();
+         t8=new JLabel(Name[7]);
          t8.setBounds(44,530,(int) 217.81,45);
          t8.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t8.setBackground(new Color(217,217,217));
@@ -182,7 +220,7 @@ public class Information extends JFrame implements ActionListener{
          t8.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t8);
 
-         t9=new JTextField();
+         t9=new JLabel(Mobile[0]);
          t9.setBounds((int) 283.06,136,(int) 217.81,45);
          t9.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t9.setBackground(new Color(217,217,217));
@@ -190,7 +228,7 @@ public class Information extends JFrame implements ActionListener{
          t9.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t9);
 
-         t10=new JTextField();
+         t10=new JLabel(Mobile[1]);
          t10.setBounds((int) 283.06,191,(int) 217.81,45);
          t10.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t10.setBackground(new Color(217,217,217));
@@ -198,7 +236,7 @@ public class Information extends JFrame implements ActionListener{
          t10.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t10);
 
-         t11=new JTextField();
+         t11=new JLabel(Mobile[2]);
          t11.setBounds((int) 283.06,247,(int) 217.81,45);
          t11.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t11.setBackground(new Color(217,217,217));
@@ -206,7 +244,7 @@ public class Information extends JFrame implements ActionListener{
          t11.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t11);
 
-         t12=new JTextField();
+         t12=new JLabel(Mobile[3]);
          t12.setBounds((int) 283.06,302,(int) 217.81,45);
          t12.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t12.setBackground(new Color(217,217,217));
@@ -214,7 +252,7 @@ public class Information extends JFrame implements ActionListener{
          t12.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t12);
 
-         t13=new JTextField();
+         t13=new JLabel(Mobile[4]);
          t13.setBounds((int) 283.06,359,(int) 217.81,45);
          t13.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t13.setBackground(new Color(217,217,217));
@@ -222,7 +260,7 @@ public class Information extends JFrame implements ActionListener{
          t13.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t13);
 
-         t14=new JTextField();
+         t14=new JLabel(Mobile[5]);
          t14.setBounds((int) 283.06,416,(int) 217.81,45);
          t14.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t14.setBackground(new Color(217,217,217));
@@ -230,7 +268,7 @@ public class Information extends JFrame implements ActionListener{
          t14.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t14);
 
-         t15=new JTextField();
+         t15=new JLabel(Mobile[6]);
          t15.setBounds((int) 283.06,473,(int) 217.81,45);
          t15.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t15.setBackground(new Color(217,217,217));
@@ -238,7 +276,7 @@ public class Information extends JFrame implements ActionListener{
          t15.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t15);
 
-         t16=new JTextField();
+         t16=new JLabel(Mobile[7]);
          t16.setBounds((int) 283.06,530,(int) 217.81,45);
          t16.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t16.setBackground(new Color(217,217,217));
@@ -246,7 +284,7 @@ public class Information extends JFrame implements ActionListener{
          t16.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t16);
 
-         t17=new JTextField();
+         t17=new JLabel(Password[0]);
          t17.setBounds((int) 522.13,136,(int) 217.81,45);
          t17.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t17.setBackground(new Color(217,217,217));
@@ -254,7 +292,7 @@ public class Information extends JFrame implements ActionListener{
          t17.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t17);
 
-         t18=new JTextField();
+         t18=new JLabel(Password[1]);
          t18.setBounds((int) 522.13,191,(int) 217.81,45);
          t18.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t18.setBackground(new Color(217,217,217));
@@ -262,7 +300,7 @@ public class Information extends JFrame implements ActionListener{
          t18.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t18);
 
-         t19=new JTextField();
+         t19=new JLabel(Password[2]);
          t19.setBounds((int) 522.13,247,(int) 217.81,45);
          t19.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t19.setBackground(new Color(217,217,217));
@@ -270,7 +308,7 @@ public class Information extends JFrame implements ActionListener{
          t19.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t19);
 
-         t20=new JTextField();
+         t20=new JLabel(Password[3]);
          t20.setBounds((int) 522.13,302,(int) 217.81,45);
          t20.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t20.setBackground(new Color(217,217,217));
@@ -278,7 +316,7 @@ public class Information extends JFrame implements ActionListener{
          t20.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t20);
 
-         t21=new JTextField();
+         t21=new JLabel(Password[4]);
          t21.setBounds((int) 522.13,359,(int) 217.81,45);
          t21.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t21.setBackground(new Color(217,217,217));
@@ -286,7 +324,7 @@ public class Information extends JFrame implements ActionListener{
          t21.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t21);
 
-         t22=new JTextField();
+         t22=new JLabel(Password[5]);
          t22.setBounds((int) 522.13,416,(int) 217.81,45);
          t22.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t22.setBackground(new Color(217,217,217));
@@ -294,7 +332,7 @@ public class Information extends JFrame implements ActionListener{
          t22.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t22);
 
-         t23=new JTextField();
+         t23=new JLabel(Password[6]);
          t23.setBounds((int) 522.13,473,(int) 217.81,45);
          t23.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t23.setBackground(new Color(217,217,217));
@@ -302,7 +340,7 @@ public class Information extends JFrame implements ActionListener{
          t23.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t23);
 
-         t24=new JTextField();
+         t24=new JLabel(Password[7]);
          t24.setBounds((int) 522.13,530,(int) 217.81,45);
          t24.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t24.setBackground(new Color(217,217,217));
@@ -310,7 +348,7 @@ public class Information extends JFrame implements ActionListener{
          t24.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t24);
 
-         t25=new JTextField();
+         t25=new JLabel(userEmail[0]);
          t25.setBounds((int) 761.19,136,(int) 217.81,45);
          t25.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t25.setBackground(new Color(217,217,217));
@@ -318,7 +356,7 @@ public class Information extends JFrame implements ActionListener{
          t25.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t25);
 
-         t26=new JTextField();
+         t26=new JLabel(userEmail[1]);
          t26.setBounds((int) 761.19,191,(int) 217.81,45);
          t26.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t26.setBackground(new Color(217,217,217));
@@ -326,7 +364,7 @@ public class Information extends JFrame implements ActionListener{
          t26.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t26);
 
-         t27=new JTextField();
+         t27=new JLabel(userEmail[2]);
          t27.setBounds((int) 761.19,247,(int) 217.81,45);
          t27.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t27.setBackground(new Color(217,217,217));
@@ -334,7 +372,7 @@ public class Information extends JFrame implements ActionListener{
          t27.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t27);
 
-         t28=new JTextField();
+         t28=new JLabel(userEmail[3]);
          t28.setBounds((int) 761.19,302,(int) 217.81,45);
          t28.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t28.setBackground(new Color(217,217,217));
@@ -342,7 +380,7 @@ public class Information extends JFrame implements ActionListener{
          t28.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t28);
 
-         t29=new JTextField();
+         t29=new JLabel(userEmail[4]);
          t29.setBounds((int) 761.19,359,(int) 217.81,45);
          t29.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t29.setBackground(new Color(217,217,217));
@@ -350,7 +388,7 @@ public class Information extends JFrame implements ActionListener{
          t29.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t29);
 
-         t30=new JTextField();
+         t30=new JLabel(userEmail[5]);
          t30.setBounds((int) 761.19,416,(int) 217.81,45);
          t30.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t30.setBackground(new Color(217,217,217));
@@ -358,7 +396,7 @@ public class Information extends JFrame implements ActionListener{
          t30.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t30);
 
-         t31=new JTextField();
+         t31=new JLabel(userEmail[6]);
          t31.setBounds((int) 761.19,473,(int) 217.81,45);
          t31.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t31.setBackground(new Color(217,217,217));
@@ -366,7 +404,7 @@ public class Information extends JFrame implements ActionListener{
          t31.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t31);
 
-         t32=new JTextField();
+         t32=new JLabel(userEmail[7]);
          t32.setBounds((int) 761.19,530,(int) 217.81,45);
          t32.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t32.setBackground(new Color(217,217,217));
@@ -374,16 +412,33 @@ public class Information extends JFrame implements ActionListener{
          t32.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t32);
 
+         JLabel l14=new JLabel("User Serial");
+         l14.setFont(new Font("Bell MT",Font.PLAIN,20));
+         l14.setForeground(Color.BLACK);
+         l14.setBounds(86,619,109,23);
+         l14.setHorizontalAlignment(SwingConstants.CENTER);
+         l.add(l14);
+
+         JLabel l15=new JLabel("Admin Password");
+         l15.setFont(new Font("Bell MT",Font.PLAIN,20));
+         l15.setForeground(Color.BLACK);
+         l15.setBounds(277,619,195,23);
+         l15.setHorizontalAlignment(SwingConstants.CENTER);
+         l.add(l15);
+
+         
+         //user serial
          t33=new JTextField();
-         t33.setBounds((int) 107.5,620,173,61);
+         t33.setBounds(73,642,136,61);
          t33.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t33.setBackground(new Color(0x54BAB9));
          t33.setForeground(Color.black);
          t33.setHorizontalAlignment(SwingConstants.CENTER);
          l.add(t33);
 
+         //admin pass
          t34=new JTextField();
-         t34.setBounds(382,620,173,61);
+         t34.setBounds(273,642,204,61);
          t34.setFont(new Font ("Bell MT",Font.PLAIN,20));
          t34.setBackground(new Color(0x54BAB9));
          t34.setForeground(Color.black);
@@ -397,16 +452,30 @@ public class Information extends JFrame implements ActionListener{
          b1.setForeground(Color.BLACK);
          b1.setFocusable(false);
          b1.setBackground(new Color(0x54BAB9));
-         b1.setBounds(676,620,173,61);
+         b1.setBounds(541,642,173,61);
          b1.setBorderPainted(false);
          b1.addActionListener(this);
          l.add(b1);
 
-        
+         b2=new JButton("Add User");
+         b2.setFont(new Font("Bell MT",Font.PLAIN,20));
+         b2.setForeground(Color.BLACK);
+         b2.setFocusable(false);
+         b2.setBackground(new Color(0x54BAB9));
+         b2.setBounds(778,642,173,61);
+         b2.setBorderPainted(false);
+         b2.addActionListener(this);
+         l.add(b2);
+
+         b=new JLabel(new ImageIcon("./images/INFO.png"));
+         b.setBounds(44,136,937,439);
+         b.setForeground(Color.black);
+         b.setHorizontalAlignment(SwingConstants.CENTER);
+         l.add(b);
 
 
-         JLabel I1=new JLabel (new ImageIcon("./images/wallpaper.png"));
-         I1.setBounds(2599,684,1024,768);
+         JLabel I1=new JLabel (new ImageIcon("./images/Background.png"));
+         I1.setBounds(0,0,1024,768);
          l.add(I1);
 
          p1=new JPanel();
@@ -419,7 +488,47 @@ public class Information extends JFrame implements ActionListener{
      }
 
 
-     public void actionPerformed(ActionEvent e) {
+     public void actionPerformed(ActionEvent ae) {
+
+               if(ae.getSource()==b1)
+			{
+				String userSerial = t33.getText();
+				String num = t33.getText();
+				String adminPassword = t34.getText();
+
+				int LineNumber = Integer.parseInt(userSerial);
+				LineNumber -= 1;
+
+				if(num.isEmpty() || adminPassword.isEmpty()){
+					JOptionPane.showMessageDialog(null,"Full Fill User Serial and Admin Password");
+				}
+
+				else if(adminPassword.equals(this.password))
+				{
+					try {
+					List<String> lines = Files.readAllLines(path);
+					lines.remove(LineNumber);
+					Files.write(path, lines);
+					JOptionPane.showMessageDialog(null,"User Remove Successful");
+					} catch (IOException e) {
+					JOptionPane.showMessageDialog(null,"ERROR");
+					}
+
+					Information f = new Information(Email);
+					this.setVisible(false);
+					f.setVisible(true);
+				}
+				else{JOptionPane.showMessageDialog(null,"User Password is Wrong");}
+
+
+			}
+               else if(ae.getSource()==b2)
+               {
+                    Admin f = new Admin(Email);
+				this.setVisible(false);
+				f.setVisible(true);
+               }
+
          
      }
     }

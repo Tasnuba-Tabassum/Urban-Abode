@@ -59,17 +59,6 @@ public class Welcome extends JFrame implements ActionListener{
            l3.setBounds(307, 134, 410, 58);
            l.add(l3);
 
-        //    JLabel l4 =new JLabel("Already Have An Account?");
-        //    l4.setFont(new Font("Bell MT", Font.PLAIN, 24));
-        //    l4.setForeground(Color.BLACK);
-        //    l4.setBounds(205, 408, 332, 32);
-        //    l.add(l4);
-
-        //    JLabel l5 =new JLabel("New Here?");
-        //    l5.setFont(new Font("Bell MT", Font.PLAIN, 24));
-        //    l5.setForeground(Color.BLACK);
-        //    l5.setBounds(632, 410, 143, 29);
-        //    l.add(l5);
 
            JLabel l6 =new JLabel("Enter Password");
            l6.setFont(new Font("Bell MT", Font.PLAIN, 24));
@@ -163,7 +152,7 @@ public class Welcome extends JFrame implements ActionListener{
 
             
            JLabel I5 = new JLabel(new ImageIcon("./images/3042-removebg-preview.png"));
-           I5.setBounds(0, 470, 1024, 344);
+           I5.setBounds(0, 460, 1024, 344);
            l.add(I5);
 
             this.add(l);
@@ -178,7 +167,7 @@ public class Welcome extends JFrame implements ActionListener{
 				String userPassword = t2.getText();
 				Account createAccount = new Account();
                 if(userEmail.equals("admin") && userPassword.equals("admin")){
-                    Admin f = new Admin(userEmail);
+                    Admin f = new Admin(userEmail,userPassword);
                     this.setVisible(false);
                     f.setVisible(true);
                 }

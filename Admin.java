@@ -66,7 +66,7 @@ public class Admin extends JFrame implements ActionListener{
        // throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
        if(e.getSource()==b1){
         dispose();
-        Information b1=new Information();
+        Information b1=new Information(userEmail);
         b1.setVisible(true);
     }
 }

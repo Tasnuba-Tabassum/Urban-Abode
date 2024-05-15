@@ -22,9 +22,9 @@ public class About extends JFrame implements ActionListener{
             l.setIcon(img1);
 
             l2=new JLabel("This project was developed by four students of AIUB, section CC under the guidance of Tanvir Ahmed sir");
-            l2.setFont(new Font("Bell MT", Font.PLAIN, 14));
+            l2.setFont(new Font("Bell MT", Font.PLAIN, 17));
             l2.setForeground(Color.BLACK);
-            l2.setBounds(169,708,693,17);
+            l2.setBounds(169,708,740,17);
             this.add(l2);
 
             l1=new JLabel(img2);
